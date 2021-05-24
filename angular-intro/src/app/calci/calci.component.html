@@ -1,0 +1,15 @@
+<p>calci works add sub mul devision</p>
+
+<input type="text" #number1 (change)="setN1($any($event.target).value)"/>
+<input type="text" #number2 (change)="setN2(number2.value)"/>
+
+
+<input type="button" value="add" (click)="add()"/>
+<input type="button" value="sub" (click)="sub()"/>
+<input type="button" value="mul" (click)="mul()"/>
+<input type="button" value="div" (click)="div()"/>
+
+
+<span>{{ result }}</span>
+
+

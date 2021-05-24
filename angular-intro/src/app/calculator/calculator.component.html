@@ -1,0 +1,21 @@
+<h3>Calculator</h3>
+<hr>
+<!-- 
+    <input type="number" #txtNum1 (input)="setN1(txtNum1.value)">
+    <input type="number" #txtNum2 (input)="setN2(txtNum2.value)"> 
+-->
+<input type="number" (change)="setN1($any($event.target).value)">
+<input type="number" (change)="setN2($any($event.target).value)">
+<br>
+<input type="button" value="Add" (click)="onAddClick()">
+<input type="button" value="Subtract" (click)="onSubtractClick()">
+<input type="button" value="Multiply" (click)="onMultiplyClick()">
+<input type="button" value="Divide" (click)="onDivideClick()">
+
+<!--
+
+<div 
+   *ngIf="result !== 0" 
+    [ngClass]="{ positive : result >= 0, negative : result < 0 }"
+
+   {{result | currency:'INR'}} -->

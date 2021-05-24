@@ -1,0 +1,27 @@
+<h4>Inventar Page</h4>
+<h4>Inventar count</h4>
+<input type=button name="count" onclick="addInventary()"/>
+<h4>{{count}}</h4>
+<h4>{{inventaryNames}}</h4>
+
+<input type="text" #value1/>
+<input type="button" value="add" (click)=addItem(value1.value)/>
+
+
+
+<li *ngFor = "let inventaryName of invetaryList">
+    <span>{{ inventaryName.id }}</span>
+    <span>{{ inventaryName.inventaryname }}</span>
+    <span>{{ inventaryName.date }}</span>
+
+    <br>
+    <span>{{ inventaryName.id }}</span>
+</li>
+
+<input type="button" value="getAll" (click)=getAll()/>
+<li *ngFor ="let i of result">
+    <span>{{i}} </span>
+    
+</li>
+
+
